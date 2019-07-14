@@ -1,0 +1,11 @@
+- name: Test ansible playbook
+  hosts: localhost
+  tasks: 
+    - name: Gather facts
+      setup:
+    - name: Run command
+      shell: /bin/echo Hello World!
+    - name: Display config
+      debug:
+        msg: "The hostname is {{ ansible_hostname }}"
+        
